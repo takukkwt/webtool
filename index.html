@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(90deg, #ffcccc, #ffe6b3, #ffff99, #d9ffcc, #b3e0ff, #c2b3ff);
+            color: white;
+            text-align: left;
+            font-size: 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .tool-container {
+            display: flex; /* 横並びにするためのフレックスボックス */
+            justify-content: center; /* 中央揃え */
+            margin-top: 20px; /* ヘッダーとの間に余白 */
+            flex-wrap: wrap; /* 必要に応じて折り返し */
+        }
+        .tool {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px; /* ツールブロック間の間隔 */
+            width: 200px; /* ツールブロックの幅 */
+            text-align: center; /* 中央揃え */
+            text-decoration: none; /* 下線を消す */
+            color: inherit; /* 親の色を継承 */
+            transition: transform 0.2s, box-shadow 0.2s; /* ホバーエフェクト */
+        }
+        .tool:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .tool img {
+            width: 100%; /* 画像をブロックの幅に合わせる */
+            border-radius: 5px;
+        }
+        .tool h2 {
+            color: #333;
+            margin: 10px 0 5px; /* 上下の余白 */
+        }
+        .description {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        WEB ツール
+    </header>
+
+    <div class="tool-container">
+        <a class="tool" href="https://takukkwt.github.io/webwatch/" target="_blank">
+            <img src="memo.png" alt="シンプル時計の画像" />
+            <h2>シンプル時計</h2>
+            <p class="description">BGM機能もあります。</p>
+        </a>
+
+        <a class="tool" href="https://takukkwt.github.io/webmemo/" target="_blank">
+            <img src="watch.png" alt="smemoの画像" />
+            <h2>smemo</h2>
+            <p class="description">シンプルなメモです。バグあり</p>
+        </a>
+
+    </div>
+
+</body>
+</html>
